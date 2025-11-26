@@ -1,10 +1,12 @@
-import os
+import os 
 
 from flask import Flask
 from cardapio import buscar_cardapio, buscar_por_id
+from flask_cors import CORS
+app = Flask (__name__)
+CORS(app)
 
 
-app = Flask(__name__)
 @app.route("/")
 def hello_world():
 
